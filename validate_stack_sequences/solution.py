@@ -7,7 +7,7 @@ class Solution:
         push_pointer: int = 0
         pop_pointer: int = 0
 
-        while pop_pointer != len(pushed) and push_pointer != len(popped):
+        while pop_pointer != len(pushed) or push_pointer != len(popped):
             if pop_pointer != len(popped) and len(stack_simulation) != 0 and popped[pop_pointer] == stack_simulation[-1]:
                 stack_simulation.pop(-1)
                 pop_pointer += 1
